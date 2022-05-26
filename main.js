@@ -1,12 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
-    if (localStorage.getItem("id") != "" && localStorage.getItem("id") != null) {
         const objCompradorStr = JSON.parse(localStorage.getItem("Datos Comprador"));
-        navSaludo.innerHTML = `Hola ${objCompradorStr.id}`
-        console.log(localStorage.getItem("id"))
-    }else{
-        console.log("no se ingresó un nombre")
-    }
-})
+        navSaludo.innerHTML = `Bienvenid@ ${objCompradorStr.id}`
+    })  
 
 
 function Producto (marca, modelo, precio){
@@ -76,7 +71,7 @@ console.log(objCompradorStr)
 //--------------------------------
 objCompradorStr.id ? crearNac() : false
 function crearNac(){
-navSaludo.innerHTML = `Hola ${objCompradorStr.id}`
+navSaludo.innerHTML = `Bienvenid@ ${objCompradorStr.id}`
 }
 //-----------------------------------------------------
 
